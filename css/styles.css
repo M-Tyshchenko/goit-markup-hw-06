@@ -726,6 +726,7 @@ footer {
 
 .form-textarea {
   width: 100%;
+  min-height: 120px;
   resize: none;
   padding: 8px 16px;
 
@@ -746,17 +747,34 @@ footer {
   align-items: center;
 }
 
-.checkbox-input {
+.checkbox-custom {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 16px;
   height: 16px;
 
   border: 1px solid var(--dark);
   border-radius: 2px;
+
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.checkbox-input:checked + .checkbox-custom {
+  border-color: var(--primary-brand);
+  background-color: var(--primary-brand);
+}
+
+.checkbox-icon {
+  fill: none;
+}
+
+.checkbox-input:checked + .checkbox-custom > .checkbox-icon {
+  fill: var(--light);
 }
 
 .checkbox-text {
-  display: inline-block;
-
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
