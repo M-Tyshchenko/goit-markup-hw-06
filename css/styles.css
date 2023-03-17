@@ -96,6 +96,12 @@ body {
   overflow: hidden;
 }
 
+.hidden {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance:none;
+  }
+
 .form {
   font-size: 12px;
   line-height: 1.17;
@@ -726,6 +732,7 @@ footer {
 
 .form-textarea {
   width: 100%;
+  min-height: 120px;
   resize: none;
   padding: 8px 16px;
 
@@ -740,13 +747,14 @@ footer {
   color: var(--modal-overlay);
 }
 
-.checkbox-label {
+/* .checkbox-label {
   display: flex;
   gap: 8px;
   align-items: center;
-}
+} */
 
 .checkbox-input {
+  display: inline-block;
   width: 16px;
   height: 16px;
 
@@ -754,8 +762,16 @@ footer {
   border-radius: 2px;
 }
 
+.checkbox:checked + .checkbox-input {
+background-color: var(--primary-brand);
+background-image: url(../images/svg/form/click.svg);
+background-repeat: no-repeat;
+background-position: center;
+border: none;
+}
+
 .checkbox-text {
-  display: inline-block;
+  /* display: inline-block; */
 
   font-size: 12px;
   line-height: 1.17;
