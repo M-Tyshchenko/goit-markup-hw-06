@@ -747,11 +747,11 @@ footer {
   color: var(--modal-overlay);
 }
 
-/* .checkbox-label {
+.checkbox-label {
   display: flex;
   gap: 8px;
   align-items: center;
-} */
+}
 
 .checkbox-custom {
   display: flex;
