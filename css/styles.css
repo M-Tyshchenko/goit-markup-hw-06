@@ -96,6 +96,12 @@ body {
   overflow: hidden;
 }
 
+.hidden {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
 .form {
   font-size: 12px;
   line-height: 1.17;
@@ -741,11 +747,11 @@ footer {
   color: var(--modal-overlay);
 }
 
-.checkbox-label {
+/* .checkbox-label {
   display: flex;
   gap: 8px;
   align-items: center;
-}
+} */
 
 .checkbox-custom {
   display: flex;
@@ -772,6 +778,14 @@ footer {
 
 .checkbox-input:checked + .checkbox-custom > .checkbox-icon {
   fill: var(--light);
+}
+
+.checkbox:checked + .checkbox-input {
+  background-color: var(--primary-brand);
+  background-image: url(../images/svg/form/click.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  border: none;
 }
 
 .checkbox-text {
